@@ -95,6 +95,7 @@
             <div class="flex items-center justify-between h-16">
                 <span class="text-white text-lg font-bold">Menu de Batalha</span>
                 <div class="hidden md:flex space-x-4 text-white">
+                    <a href="#aula" class="hover:text-[#90E0EF] transition-colors nav-link">Aula</a>
                     <a href="#falso-profeta-estrategia" class="hover:text-[#90E0EF] transition-colors nav-link">Estratégia</a>
                     <a href="#diagnostico" class="hover:text-[#90E0EF] transition-colors nav-link">Diagnóstico</a>
                     <a href="#historia" class="hover:text-[#90E0EF] transition-colors nav-link">História</a>
@@ -112,6 +113,19 @@
 
     <main class="container mx-auto p-4 md:p-8">
         
+        <section id="aula" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-center">
+                 <div class="flex justify-center items-center gap-4">
+                    <h2 class="text-3xl font-bold text-[#00446A] mb-4 narrate-able">Assista à Aula de Origem</h2>
+                     <span class="text-2xl narrate-btn" title="Ouvir esta secção">🔊</span>
+                </div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 narrate-able">Todo o conteúdo deste infográfico foi inspirado na aula abaixo. Assista para obter o contexto completo e a profundidade da mensagem.</p>
+                <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto bg-black rounded-lg shadow-md overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/mLT7DVJBle0?si=Gbcf5dGOHsN_TaFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
         <section id="falso-profeta-estrategia" class="mb-12 pt-16 -mt-16">
             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-center">
                  <div class="flex justify-center items-center gap-4">
@@ -249,8 +263,13 @@
         <section id="gemini-interaction" class="mb-12 pt-16 -mt-16">
             <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
                 <h2 class="text-3xl font-bold text-[#00446A] text-center mb-2">✨ Reflexão Teológica Assistida por IA</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center">Tem alguma dúvida? Explore os mistérios da escatologia bíblica. Pergunte ao nosso assistente, treinado com uma perspectiva rabínico-protestante, e aprofunde seu conhecimento.</p>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center">Para usar o assistente de IA, insira a sua própria chave da API do Gemini. Isto permite que você explore os mistérios da escatologia bíblica de forma interativa e pessoal.</p>
                 <div class="max-w-2xl mx-auto">
+                    <div class="mb-4">
+                        <label for="gemini-api-key" class="block text-sm font-bold text-gray-700 mb-2">Sua Chave da API Gemini (Google AI Studio)</label>
+                        <input type="password" id="gemini-api-key" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:outline-none" placeholder="Cole sua chave da API aqui">
+                        <p class="text-xs text-gray-500 mt-1">Obtenha sua chave gratuitamente no <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-[#0077B6] hover:underline">Google AI Studio</a>.</p>
+                    </div>
                     <textarea id="theological-question" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:outline-none" rows="3" placeholder="Ex: Qual a relação entre a Babilônia do Apocalipse e os impérios históricos?"></textarea>
                     <button id="ask-gemini-btn" class="mt-4 w-full bg-[#0077B6] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#00446A] transition-colors duration-300">
                         Gerar Reflexão
@@ -276,6 +295,17 @@
     <footer class="bg-[#00446A] text-white text-center py-12 px-4">
         <h2 class="text-3xl font-bold text-shadow">A Esperança Inabalável</h2>
         <p class="text-lg max-w-3xl mx-auto mt-4">Apesar do seu poder aterrador, a Besta é uma criatura do abismo, marcada pela não-existência ("já não é") e destinada à perdição. Sua história faz parte de uma narrativa maior, controlada por Aquele que <span class="font-black text-[#90E0EF]">"é, que era e que há de vir"</span>.</p>
+        
+        <div class="mt-8">
+            <h3 class="text-xl font-bold mb-4">🔗 Conecte-se Conosco nas Redes Sociais:</h3>
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <a href="https://www.instagram.com/ensinandooreino" target="_blank" class="bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2 font-semibold">Instagram</a>
+                <a href="https://www.facebook.com/parceirosbrasildoreino" target="_blank" class="bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2 font-semibold">Facebook</a>
+                <a href="https://twitter.com/maykorodrigues1" target="_blank" class="bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2 font-semibold">Twitter</a>
+                <a href="https://www.youtube.com/@EnsinandooReino" target="_blank" class="bg-white/10 hover:bg-white/20 transition-colors rounded-lg px-4 py-2 font-semibold">YouTube</a>
+                <a href="https://chat.whatsapp.com/K8LcAiEi84HF4tU6wCBDE2" target="_blank" class="bg-green-500 hover:bg-green-400 transition-colors rounded-lg px-6 py-3 font-bold text-lg">Entre no Grupo de WhatsApp</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Modals -->
@@ -416,68 +446,84 @@
             });
             
             // Radar Chart Logic
-            const radarCtx = document.getElementById('radarChart').getContext('2d');
-            const radarData = {
-                labels: ['Educação', 'Religião', 'Cultura', 'Política', 'Mídia', 'Economia', 'Família'],
-                datasets: [{
-                    label: 'Meu Nível de Influência',
-                    data: [5, 5, 5, 5, 5, 5, 5],
-                    fill: true,
-                    backgroundColor: 'rgba(0, 119, 182, 0.2)',
-                    borderColor: 'rgb(0, 119, 182)',
-                    pointBackgroundColor: 'rgb(0, 119, 182)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgb(0, 119, 182)'
-                }]
-            };
-            const radarChart = new Chart(radarCtx, {
-                type: 'radar',
-                data: radarData,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    elements: { line: { tension: 0.1, borderWidth: 3 } },
-                    scales: { r: { angleLines: { display: true }, suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 12, weight: 'bold' } } } }
-                }
-            });
-            const sliders = document.querySelectorAll('.slider-track');
-            sliders.forEach(slider => {
-                slider.addEventListener('input', (e) => {
-                    const index = parseInt(e.target.dataset.index);
-                    const value = parseInt(e.target.value);
-                    const valueLabel = document.getElementById(`${e.target.id.replace('Slider', '')}Value`);
-                    valueLabel.textContent = value;
-                    radarChart.data.datasets[0].data[index] = value;
-                    radarChart.update();
+            const radarCtx = document.getElementById('radarChart')?.getContext('2d');
+            let radarChart;
+            if (radarCtx) {
+                const radarData = {
+                    labels: ['Educação', 'Religião', 'Cultura', 'Política', 'Mídia', 'Economia', 'Família'],
+                    datasets: [{
+                        label: 'Meu Nível de Influência',
+                        data: [5, 5, 5, 5, 5, 5, 5],
+                        fill: true,
+                        backgroundColor: 'rgba(0, 119, 182, 0.2)',
+                        borderColor: 'rgb(0, 119, 182)',
+                        pointBackgroundColor: 'rgb(0, 119, 182)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(0, 119, 182)'
+                    }]
+                };
+                 radarChart = new Chart(radarCtx, {
+                    type: 'radar',
+                    data: radarData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        elements: { line: { tension: 0.1, borderWidth: 3 } },
+                        scales: { r: { angleLines: { display: true }, suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 12, weight: 'bold' } } } }
+                    }
                 });
-            });
+                const sliders = document.querySelectorAll('.slider-track');
+                sliders.forEach(slider => {
+                    slider.addEventListener('input', (e) => {
+                        const index = parseInt(e.target.dataset.index);
+                        const value = parseInt(e.target.value);
+                        const valueLabel = document.getElementById(`${e.target.id.replace('Slider', '')}Value`);
+                        valueLabel.textContent = value;
+                        radarChart.data.datasets[0].data[index] = value;
+                        radarChart.update();
+                    });
+                });
+            }
 
             // Gemini Text Gen Logic
             const askGeminiBtn = document.getElementById('ask-gemini-btn');
             const questionTextarea = document.getElementById('theological-question');
             const responseArea = document.getElementById('gemini-response');
             const textLoader = document.getElementById('loader');
+            const apiKeyInput = document.getElementById('gemini-api-key');
+
             askGeminiBtn.addEventListener('click', async () => {
                 const userQuery = questionTextarea.value.trim();
-                if (!userQuery) { responseArea.textContent = 'Por favor, insira uma pergunta.'; return; }
+                const userApiKey = apiKeyInput.value.trim();
+
+                if (!userApiKey) {
+                    responseArea.textContent = 'Por favor, insira a sua chave da API do Gemini para continuar.';
+                    return;
+                }
+                if (!userQuery) { 
+                    responseArea.textContent = 'Por favor, insira uma pergunta.'; 
+                    return; 
+                }
+
                 textLoader.classList.remove('hidden');
                 responseArea.textContent = '';
                 askGeminiBtn.disabled = true;
+
                 const systemPrompt = `Aja como um assistente especialista em escatologia bíblica, com a erudição de um rabino judeu, mas com um diálogo e compreensão protestante. Baseie-se nos conceitos apresentados no infográfico sobre a Besta do Apocalipse, a Trindade Profana, os 7 Montes e as interpretações históricas, simbólicas e futuristas. Forneça uma reflexão concisa e aprofundada para a pergunta do usuário.`;
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${userApiKey}`;
                 const payload = { contents: [{ parts: [{ text: userQuery }] }], systemInstruction: { parts: [{ text: systemPrompt }] }, };
+                
                 try {
                     const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                    if (!response.ok) { throw new Error(`API Error: ${response.statusText}`); }
+                    if (!response.ok) { throw new Error(`API Error: ${response.status} ${response.statusText}`); }
                     const result = await response.json();
                     const candidate = result.candidates?.[0];
                     if (candidate && candidate.content?.parts?.[0]?.text) { responseArea.textContent = candidate.content.parts[0].text; }
-                    else { responseArea.textContent = 'Não foi possível gerar uma reflexão. Por favor, tente novamente.'; }
+                    else { responseArea.textContent = 'Não foi possível gerar uma reflexão. Verifique sua chave da API e tente novamente.'; }
                 } catch (error) {
                     console.error("Error calling Gemini API:", error);
-                    responseArea.textContent = 'Ocorreu um erro ao conectar com o assistente de IA. Verifique o console para mais detalhes.';
+                    responseArea.textContent = 'Ocorreu um erro ao conectar com o assistente de IA. Verifique se a sua chave da API é válida e tente novamente.';
                 } finally {
                     textLoader.classList.add('hidden');
                     askGeminiBtn.disabled = false;
@@ -507,7 +553,7 @@
             
              // Sticky Nav Logic
             const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('section');
+            const sections = document.querySelectorAll('main section');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -568,6 +614,11 @@
             }
 
             async function generateAndPlayAudio(textToNarrate, sectionTitle) {
+                const userApiKey = apiKeyInput.value.trim();
+                if (!userApiKey) {
+                    alert('Por favor, insira a sua chave da API do Gemini na secção de IA para usar a narração.');
+                    return;
+                }
                 if (currentAudio) {
                     currentAudio.pause();
                 }
@@ -578,8 +629,7 @@
                 ttsAudio.classList.add('hidden');
                 ttsAudio.src = '';
                 
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${userApiKey}`;
                 const payload = {
                     contents: [{ parts: [{ text: `Diga com um tom professoral e claro: ${textToNarrate}` }] }],
                     generationConfig: {
@@ -595,7 +645,7 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
                     });
-                    if (!response.ok) throw new Error(`TTS API Error: ${response.statusText}`);
+                    if (!response.ok) throw new Error(`TTS API Error: ${response.status} ${response.statusText}`);
                     
                     const result = await response.json();
                     const part = result?.candidates?.[0]?.content?.parts?.[0];
@@ -619,7 +669,7 @@
                     }
                 } catch (error) {
                     console.error("Error in TTS:", error);
-                    ttsLabel.textContent = "Erro ao gerar áudio.";
+                    ttsLabel.textContent = "Erro ao gerar áudio. Verifique a sua chave da API.";
                 } finally {
                      ttsLoader.classList.add('hidden');
                 }
