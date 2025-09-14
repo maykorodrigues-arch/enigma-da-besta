@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Enigma da Besta do Apocalipse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 500px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 450px;
+            }
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .citation {
+            font-style: italic;
+            border-left: 4px solid #90E0EF;
+            padding-left: 1rem;
+            margin-top: 1rem;
+            color: #0077B6;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #0077B6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        .tts-loader {
+            width: 24px;
+            height: 24px;
+            border-width: 3px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .nav-active {
+            color: #90E0EF;
+            font-weight: bold;
+        }
+        .narrate-btn {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .narrate-btn:hover {
+            transform: scale(1.1);
+        }
+        .slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #0077B6;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: #d1e9ff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#e0f7fa]">
+
+    <nav id="navbar" class="sticky top-0 z-50 bg-[#00446A]/80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <span class="text-white text-lg font-bold">Menu de Batalha</span>
+                <div class="hidden md:flex space-x-4 text-white">
+                    <a href="#falso-profeta-estrategia" class="hover:text-[#90E0EF] transition-colors nav-link">Estratégia</a>
+                    <a href="#diagnostico" class="hover:text-[#90E0EF] transition-colors nav-link">Diagnóstico</a>
+                    <a href="#historia" class="hover:text-[#90E0EF] transition-colors nav-link">História</a>
+                    <a href="#batalha-moderna" class="hover:text-[#90E0EF] transition-colors nav-link">7 Montes</a>
+                    <a href="#gemini-interaction" class="hover:text-[#90E0EF] transition-colors nav-link">IA</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#00446A] text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-6xl font-black uppercase text-shadow">O Enigma da Besta</h1>
+        <p class="text-lg md:text-2xl mt-4 max-w-3xl mx-auto text-[#90E0EF]">Um Manual de Batalha Espiritual para o Crente Moderno.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="falso-profeta-estrategia" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-center">
+                 <div class="flex justify-center items-center gap-4">
+                    <h2 class="text-3xl font-bold text-[#00446A] mb-4 narrate-able">A Estratégia do Falso Profeta: Neutralização vs. Governo</h2>
+                    <span class="text-2xl narrate-btn" title="Ouvir esta secção">🔊</span>
+                </div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 narrate-able">A aula "A FERA" revela que o Falso Profeta já atua hoje, não como uma figura mítica, mas como um sistema religioso que adultera a mensagem original do Reino, trocando o chamado para governar por um convite à passividade.</p>
+                <div class="max-w-4xl mx-auto my-8">
+                    <div class="bg-blue-100 border-2 border-[#0077B6] p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-[#00446A]">MENSAGEM ORIGINAL DO REINO</h3>
+                        <p class="text-gray-700">Governar e Influenciar a Terra</p>
+                    </div>
+                    <div class="text-5xl my-4 text-red-500 font-bold">↓</div>
+                     <div class="bg-red-100 border-2 border-red-500 p-2 rounded-lg shadow-inner text-red-700 font-semibold">
+                        AÇÃO DO FALSO PROFETA (NEUTRALIZAÇÃO)
+                    </div>
+                     <div class="text-5xl my-4 text-red-500 font-bold">↓</div>
+                     <div class="bg-gray-200 border-2 border-gray-400 p-4 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800">MENSAGEM ADULTERADA</h3>
+                        <p class="text-gray-600">Frequentar um culto e esperar o arrebatamento</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="border-4 border-blue-300 p-4 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">Visão do Reino (Ação)</h3>
+                        <ul class="text-left space-y-2 list-disc list-inside text-gray-800">
+                            <li>Influenciar a Política</li>
+                            <li>Criar e Redimir a Cultura</li>
+                            <li>Discipular as Nações</li>
+                            <li>Gerar Riqueza com Propósito</li>
+                        </ul>
+                    </div>
+                     <div class="border-4 border-gray-400 p-4 rounded-lg">
+                        <h3 class="text-2xl font-bold text-gray-600 mb-4">Visão do Falso Profeta (Passividade)</h3>
+                        <ul class="text-left space-y-2 list-disc list-inside text-gray-800">
+                            <li>Abster-se da Política</li>
+                            <li>Apenas Consumir a Cultura</li>
+                            <li>Isolar-se do Mundo</li>
+                            <li>Sobreviver Financeiramente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostico" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-center">
+                 <div class="flex justify-center items-center gap-4">
+                    <h2 class="text-3xl font-bold text-[#00446A] mb-4 narrate-able">Diagnóstico de Influência: Qual é a sua Frente de Batalha?</h2>
+                    <span class="text-2xl narrate-btn" title="Ouvir esta secção">🔊</span>
+                </div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 narrate-able">O Reino de Deus avança através de pessoas comuns que decidem ser sal e luz na sua esfera de influência. Onde está a sua? Use as barras abaixo para autoavaliar o seu nível de envolvimento e veja o seu impacto no gráfico.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="chart-container h-96 lg:h-[450px]">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="educacaoSlider" class="font-bold text-[#00446A]">Educação: <span id="educacaoValue">5</span></label>
+                            <input id="educacaoSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="0">
+                        </div>
+                        <div>
+                            <label for="religiaoSlider" class="font-bold text-[#00446A]">Religião: <span id="religiaoValue">5</span></label>
+                            <input id="religiaoSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="1">
+                        </div>
+                        <div>
+                            <label for="culturaSlider" class="font-bold text-[#00446A]">Cultura: <span id="culturaValue">5</span></label>
+                            <input id="culturaSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="2">
+                        </div>
+                        <div>
+                            <label for="politicaSlider" class="font-bold text-[#00446A]">Política: <span id="politicaValue">5</span></label>
+                            <input id="politicaSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="3">
+                        </div>
+                        <div>
+                            <label for="midiaSlider" class="font-bold text-[#00446A]">Mídia: <span id="midiaValue">5</span></label>
+                            <input id="midiaSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="4">
+                        </div>
+                         <div>
+                            <label for="economiaSlider" class="font-bold text-[#00446A]">Economia: <span id="economiaValue">5</span></label>
+                            <input id="economiaSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="5">
+                        </div>
+                         <div>
+                            <label for="familiaSlider" class="font-bold text-[#00446A]">Família: <span id="familiaValue">5</span></label>
+                            <input id="familiaSlider" type="range" min="0" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider-track" data-index="6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                 <div class="flex justify-center items-center gap-4 text-center">
+                    <h2 class="text-3xl font-bold text-[#00446A] mb-2 narrate-able">As Faces da Besta Através da História</h2>
+                    <span class="text-2xl narrate-btn" title="Ouvir esta secção">🔊</span>
+                </div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center narrate-able">As "sete cabeças" da Besta representam grandes potências mundiais que, em suas épocas, se opuseram ao povo de Deus. O gráfico abaixo ilustra a força de cada império. Use os filtros para explorar por período histórico.</p>
+                <div class="flex justify-center space-x-2 mb-4">
+                    <button class="chart-filter-btn active-filter bg-[#0077B6] text-white px-4 py-2 rounded-lg" data-filter="todos">Todos</button>
+                    <button class="chart-filter-btn bg-gray-200 px-4 py-2 rounded-lg" data-filter="pre-israel">Pré-Israel</button>
+                    <button class="chart-filter-btn bg-gray-200 px-4 py-2 rounded-lg" data-filter="imperios">Impérios Clássicos</button>
+                </div>
+                <div class="chart-container">
+                    <canvas id="forcaImperialChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ferida-mortal" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <div class="flex justify-center items-center gap-4 text-center">
+                    <h2 class="text-3xl font-bold text-[#00446A] mb-4 narrate-able">A Ferida Mortal e a Ascensão Enganosa</h2>
+                    <span class="text-2xl narrate-btn" title="Ouvir esta secção">🔊</span>
+                </div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center narrate-able">Um dos eventos mais dramáticos é a "ferida mortal" em uma das cabeças da Besta, que é milagrosamente curada. Este evento causa admiração mundial e leva as nações a seguirem a Besta.</p>
+                 <div class="text-center mt-4">
+                    <button class="open-modal-btn bg-[#0077B6] text-white font-bold py-2 px-4 rounded-lg" data-modal="feridaModal">🔍 Saiba Mais sobre as Interpretações</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="batalha-moderna" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                 <div class="flex justify-center items-center gap-4 text-center">
+                    <h2 class="text-3xl font-bold text-[#00446A] mb-2 narrate-able">O Campo de Batalha Moderno: Os 7 Montes</h2>
+                    <span class="text-2xl narrate-btn" title="Ouvir esta secção">🔊</span>
+                </div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center narrate-able">A influência da Besta opera através de "mentalidades" que atacam as sete esferas fundamentais da sociedade (os 7 montes), buscando corromper a fundação dos princípios divinos.</p>
+                 <div class="text-center mt-4">
+                     <button class="open-modal-btn bg-[#0077B6] text-white font-bold py-2 px-4 rounded-lg" data-modal="montesModal">🔍 Detalhar os 7 Montes</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gemini-interaction" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#00446A] text-center mb-2">✨ Reflexão Teológica Assistida por IA</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center">Tem alguma dúvida? Explore os mistérios da escatologia bíblica. Pergunte ao nosso assistente, treinado com uma perspectiva rabínico-protestante, e aprofunde seu conhecimento.</p>
+                <div class="max-w-2xl mx-auto">
+                    <textarea id="theological-question" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0077B6] focus:outline-none" rows="3" placeholder="Ex: Qual a relação entre a Babilônia do Apocalipse e os impérios históricos?"></textarea>
+                    <button id="ask-gemini-btn" class="mt-4 w-full bg-[#0077B6] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#00446A] transition-colors duration-300">
+                        Gerar Reflexão
+                    </button>
+                    <div id="gemini-response-area" class="mt-6">
+                        <div id="loader" class="loader hidden"></div>
+                        <div id="gemini-response" class="bg-blue-50 p-4 rounded-lg text-gray-800 whitespace-pre-wrap"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="audio-player" class="fixed bottom-0 left-0 right-0 bg-[#00446A] text-white p-3 shadow-2xl transform translate-y-full transition-transform duration-300 z-50 flex items-center justify-between">
+        <div id="tts-status" class="flex items-center space-x-3">
+            <div id="tts-loader" class="loader tts-loader hidden"></div>
+            <span id="tts-label"></span>
+        </div>
+        <audio id="tts-audio" controls class="hidden"></audio>
+        <button id="close-player-btn" class="font-bold text-2xl">&times;</button>
+    </div>
+
+    <footer class="bg-[#00446A] text-white text-center py-12 px-4">
+        <h2 class="text-3xl font-bold text-shadow">A Esperança Inabalável</h2>
+        <p class="text-lg max-w-3xl mx-auto mt-4">Apesar do seu poder aterrador, a Besta é uma criatura do abismo, marcada pela não-existência ("já não é") e destinada à perdição. Sua história faz parte de uma narrativa maior, controlada por Aquele que <span class="font-black text-[#90E0EF]">"é, que era e que há de vir"</span>.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="feridaModal" class="modal fixed inset-0 z-50 bg-black/60 items-center justify-center p-4 hidden opacity-0 invisible">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-2xl p-6 relative">
+            <button class="close-modal-btn absolute top-2 right-4 text-3xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold text-[#00446A] mb-4">Interpretações da Ferida Mortal</h3>
+            <div class="space-y-4 text-gray-700">
+                <p><strong class="text-[#0077B6]">Interpretação Histórica:</strong> Alusão à lenda do "Nero Redivivus", a crença de que o imperador Nero, após seu suicídio, retornaria para governar. A "cura" seria o retorno de um imperador com o mesmo espírito perseguidor de Nero, como Domiciano.</p>
+                <p><strong class="text-[#0077B6]">Interpretação Futurista:</strong> Um atentado literal contra a vida do Anticristo, que sobreviverá de forma sobrenatural. Este evento será visto como uma "ressurreição" que enganará o mundo e validará sua divindade autoproclamada, imitando a ressurreição de Cristo.</p>
+                <p><strong class="text-[#0077B6]">Interpretação Simbólica:</strong> Representa a queda temporária de um grande sistema de poder anti-Deus (como a queda de Roma) que, contra todas as expectativas, ressurge com força renovada em uma nova forma histórica, mostrando a resiliência do mal organizado.</p>
+                <div class="border-t mt-4 pt-4 border-red-300">
+                    <h4 class="font-bold text-red-600">Aplicação Prática:</h4>
+                    <p class="text-gray-600 italic">Conforme a aula, a "ferida mortal curada" já acontece simbolicamente sempre que um sistema anti-Deus parece derrotado, mas retorna com uma nova roupagem para enganar uma nova geração. A nossa vigilância deve ser constante.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="montesModal" class="modal fixed inset-0 z-50 bg-black/60 items-center justify-center p-4 hidden opacity-0 invisible">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-3xl p-6 relative">
+            <button class="close-modal-btn absolute top-2 right-4 text-3xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-2xl font-bold text-[#00446A] mb-4">Detalhes dos 7 Montes da Sociedade</h3>
+            <div class="space-y-4">
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">1. Educação:</div><p class="text-gray-700"><strong>Alvo: Identidade Divina.</strong> Desconstruir a imagem do homem como Sacerdote, Rei, Profeta e Filho de Deus.</p></div>
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">2. Religião:</div><p class="text-gray-700"><strong>Alvo: Fé e Verdade.</strong> Gerar confusão e sincretismo, minando a exclusividade da aliança com Deus.</p></div>
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">3. Cultura:</div><p class="text-gray-700"><strong>Alvo: Propósito e Valores.</strong> Destruir os princípios judaico-cristãos e substituir o propósito eterno por hedonismo.</p></div>
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">4. Política:</div><p class="text-gray-700"><strong>Alvo: Soberania e Ordem.</strong> Criar sistemas de poder totalitários que se opõem diretamente ao governo de Deus.</p></div>
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">5. Mídia:</div><p class="text-gray-700"><strong>Alvo: Percepção da Realidade.</strong> Controlar a narrativa, disseminar desinformação e normalizar o que é contrário à Lei Divina.</p></div>
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">6. Economia:</div><p class="text-gray-700"><strong>Alvo: Mordomia e Dependência.</strong> Promover a ganância e a dependência de sistemas mundanos, em oposição à providência de Deus.</p></div>
+                <div class="flex items-start space-x-4"><div class="text-xl font-bold text-[#0077B6]">7. Família:</div><p class="text-gray-700"><strong>Alvo: Fundamento da Sociedade.</strong> Destruir a estrutura familiar bíblica, que é a base para a transmissão de fé e valores geracionais.</p></div>
+                <div class="border-t mt-4 pt-4 border-red-300">
+                    <h4 class="font-bold text-red-600">Aplicação Prática:</h4>
+                    <p class="text-gray-600 italic">A aula ensina que a Igreja não foi chamada para se esconder, mas para "conquistar" estes montes, influenciando cada área da sociedade com os princípios do Reino de Deus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            function wrapLabel(label) {
+                const maxLength = 16;
+                if (typeof label !== 'string' || label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxLength) {
+                        if (currentLine.length > 0) lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine.length > 0) lines.push(currentLine);
+                return lines;
+            }
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function (tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const allImperialData = {
+                labels: ['Babel', ['Sodoma', 'e Gomorra'], 'Egito', 'Babilônia', ['Medo-', 'Pérsia'], 'Grécia', 'Roma'].map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                data: [50, 40, 80, 70, 60, 75, 90]
+            };
+            const preIsraelData = {
+                labels: ['Babel', ['Sodoma', 'e Gomorra'], 'Egito'].map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                data: [50, 40, 80]
+            };
+            const imperiosClassicosData = {
+                labels: ['Babilônia', ['Medo-', 'Pérsia'], 'Grécia', 'Roma'].map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                data: [70, 60, 75, 90]
+            };
+
+            const forcaImperialConfig = {
+                type: 'bar',
+                data: {
+                    labels: allImperialData.labels,
+                    datasets: [{
+                        label: 'Força de Impacto na Narrativa Bíblica',
+                        data: allImperialData.data,
+                        backgroundColor: '#0077B6',
+                        borderColor: '#00446A',
+                        borderWidth: 2,
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { ...tooltipTitleCallback.plugins, legend: { display: false }, title: { display: true, text: 'Força Relativa dos Impérios Anti-Deus', color: '#00446A', font: { size: 18, weight: 'bold' } } },
+                    scales: {
+                        y: { beginAtZero: true, ticks: { color: '#00446A' }, grid: { color: '#e0f7fa' } },
+                        x: { ticks: { color: '#00446A' }, grid: { display: false } }
+                    }
+                }
+            };
+            const forcaImperialChart = new Chart(document.getElementById('forcaImperialChart'), forcaImperialConfig);
+
+            const filterButtons = document.querySelectorAll('.chart-filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active-filter', 'bg-[#0077B6]', 'text-white');
+                        btn.classList.add('bg-gray-200');
+                    });
+                    button.classList.add('active-filter', 'bg-[#0077B6]', 'text-white');
+                    button.classList.remove('bg-gray-200');
+                    const filter = button.dataset.filter;
+                    let newData;
+                    if (filter === 'pre-israel') newData = preIsraelData;
+                    else if (filter === 'imperios') newData = imperiosClassicosData;
+                    else newData = allImperialData;
+                    forcaImperialChart.data.labels = newData.labels;
+                    forcaImperialChart.data.datasets[0].data = newData.data;
+                    forcaImperialChart.update();
+                });
+            });
+            
+            // Radar Chart Logic
+            const radarCtx = document.getElementById('radarChart').getContext('2d');
+            const radarData = {
+                labels: ['Educação', 'Religião', 'Cultura', 'Política', 'Mídia', 'Economia', 'Família'],
+                datasets: [{
+                    label: 'Meu Nível de Influência',
+                    data: [5, 5, 5, 5, 5, 5, 5],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 119, 182, 0.2)',
+                    borderColor: 'rgb(0, 119, 182)',
+                    pointBackgroundColor: 'rgb(0, 119, 182)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(0, 119, 182)'
+                }]
+            };
+            const radarChart = new Chart(radarCtx, {
+                type: 'radar',
+                data: radarData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    elements: { line: { tension: 0.1, borderWidth: 3 } },
+                    scales: { r: { angleLines: { display: true }, suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 12, weight: 'bold' } } } }
+                }
+            });
+            const sliders = document.querySelectorAll('.slider-track');
+            sliders.forEach(slider => {
+                slider.addEventListener('input', (e) => {
+                    const index = parseInt(e.target.dataset.index);
+                    const value = parseInt(e.target.value);
+                    const valueLabel = document.getElementById(`${e.target.id.replace('Slider', '')}Value`);
+                    valueLabel.textContent = value;
+                    radarChart.data.datasets[0].data[index] = value;
+                    radarChart.update();
+                });
+            });
+
+            // Gemini Text Gen Logic
+            const askGeminiBtn = document.getElementById('ask-gemini-btn');
+            const questionTextarea = document.getElementById('theological-question');
+            const responseArea = document.getElementById('gemini-response');
+            const textLoader = document.getElementById('loader');
+            askGeminiBtn.addEventListener('click', async () => {
+                const userQuery = questionTextarea.value.trim();
+                if (!userQuery) { responseArea.textContent = 'Por favor, insira uma pergunta.'; return; }
+                textLoader.classList.remove('hidden');
+                responseArea.textContent = '';
+                askGeminiBtn.disabled = true;
+                const systemPrompt = `Aja como um assistente especialista em escatologia bíblica, com a erudição de um rabino judeu, mas com um diálogo e compreensão protestante. Baseie-se nos conceitos apresentados no infográfico sobre a Besta do Apocalipse, a Trindade Profana, os 7 Montes e as interpretações históricas, simbólicas e futuristas. Forneça uma reflexão concisa e aprofundada para a pergunta do usuário.`;
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const payload = { contents: [{ parts: [{ text: userQuery }] }], systemInstruction: { parts: [{ text: systemPrompt }] }, };
+                try {
+                    const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                    if (!response.ok) { throw new Error(`API Error: ${response.statusText}`); }
+                    const result = await response.json();
+                    const candidate = result.candidates?.[0];
+                    if (candidate && candidate.content?.parts?.[0]?.text) { responseArea.textContent = candidate.content.parts[0].text; }
+                    else { responseArea.textContent = 'Não foi possível gerar uma reflexão. Por favor, tente novamente.'; }
+                } catch (error) {
+                    console.error("Error calling Gemini API:", error);
+                    responseArea.textContent = 'Ocorreu um erro ao conectar com o assistente de IA. Verifique o console para mais detalhes.';
+                } finally {
+                    textLoader.classList.add('hidden');
+                    askGeminiBtn.disabled = false;
+                }
+            });
+
+            // Modal Logic
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
+            const closeModalBtns = document.querySelectorAll('.close-modal-btn');
+            openModalBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const modal = document.getElementById(btn.dataset.modal);
+                    modal.classList.remove('hidden', 'opacity-0', 'invisible');
+                    modal.classList.add('flex');
+                });
+            });
+            closeModalBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const modal = btn.closest('.modal');
+                    modal.classList.add('opacity-0', 'invisible');
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                    }, 300);
+                });
+            });
+            
+             // Sticky Nav Logic
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => { link.classList.toggle('nav-active', link.getAttribute('href').substring(1) === entry.target.id); });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+            sections.forEach(section => observer.observe(section));
+            
+             // TTS Logic
+            const narrateBtns = document.querySelectorAll('.narrate-btn');
+            const audioPlayer = document.getElementById('audio-player');
+            const ttsAudio = document.getElementById('tts-audio');
+            const ttsLoader = document.getElementById('tts-loader');
+            const ttsLabel = document.getElementById('tts-label');
+            const closePlayerBtn = document.getElementById('close-player-btn');
+            let currentAudio = null;
+
+            function base64ToArrayBuffer(base64) {
+                const binaryString = window.atob(base64);
+                const len = binaryString.length;
+                const bytes = new Uint8Array(len);
+                for (let i = 0; i < len; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                return bytes.buffer;
+            }
+
+            function pcmToWav(pcmData, sampleRate) {
+                const header = new ArrayBuffer(44);
+                const view = new DataView(header);
+                const numSamples = pcmData.length;
+                const numChannels = 1;
+                const bytesPerSample = 2;
+                const blockAlign = numChannels * bytesPerSample;
+                const byteRate = sampleRate * blockAlign;
+                const dataSize = numSamples * bytesPerSample;
+                
+                view.setUint32(0, 0x52494646, false); // "RIFF"
+                view.setUint32(4, 36 + dataSize, true);
+                view.setUint32(8, 0x57415645, false); // "WAVE"
+                view.setUint32(12, 0x666d7420, false); // "fmt "
+                view.setUint32(16, 16, true);
+                view.setUint16(20, 1, true); // PCM
+                view.setUint16(22, numChannels, true);
+                view.setUint32(24, sampleRate, true);
+                view.setUint32(28, byteRate, true);
+                view.setUint16(32, blockAlign, true);
+                view.setUint16(34, bytesPerSample * 8, true);
+                view.setUint32(36, 0x64617461, false); // "data"
+                view.setUint32(40, dataSize, true);
+                
+                const wavData = new Uint8Array(44 + dataSize);
+                wavData.set(new Uint8Array(header));
+                wavData.set(new Uint8Array(pcmData.buffer), 44);
+
+                return new Blob([wavData], { type: 'audio/wav' });
+            }
+
+            async function generateAndPlayAudio(textToNarrate, sectionTitle) {
+                if (currentAudio) {
+                    currentAudio.pause();
+                }
+                
+                audioPlayer.classList.remove('translate-y-full');
+                ttsLoader.classList.remove('hidden');
+                ttsLabel.textContent = `A gerar áudio para: "${sectionTitle}"...`;
+                ttsAudio.classList.add('hidden');
+                ttsAudio.src = '';
+                
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{ parts: [{ text: `Diga com um tom professoral e claro: ${textToNarrate}` }] }],
+                    generationConfig: {
+                        responseModalities: ["AUDIO"],
+                        speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Charon" } } }
+                    },
+                    model: "gemini-2.5-flash-preview-tts"
+                };
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!response.ok) throw new Error(`TTS API Error: ${response.statusText}`);
+                    
+                    const result = await response.json();
+                    const part = result?.candidates?.[0]?.content?.parts?.[0];
+                    const audioData = part?.inlineData?.data;
+                    const mimeType = part?.inlineData?.mimeType;
+
+                    if (audioData && mimeType && mimeType.startsWith("audio/")) {
+                        const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
+                        const pcmData = base64ToArrayBuffer(audioData);
+                        const pcm16 = new Int16Array(pcmData);
+                        const wavBlob = pcmToWav(pcm16, sampleRate);
+                        const audioUrl = URL.createObjectURL(wavBlob);
+                        
+                        currentAudio = ttsAudio;
+                        ttsAudio.src = audioUrl;
+                        ttsAudio.classList.remove('hidden');
+                        ttsAudio.play();
+                        ttsLabel.textContent = `A tocar: "${sectionTitle}"`;
+                    } else {
+                        throw new Error("Dados de áudio inválidos recebidos.");
+                    }
+                } catch (error) {
+                    console.error("Error in TTS:", error);
+                    ttsLabel.textContent = "Erro ao gerar áudio.";
+                } finally {
+                     ttsLoader.classList.add('hidden');
+                }
+            }
+            
+            narrateBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const section = e.target.closest('section');
+                    const textElements = section.querySelectorAll('.narrate-able');
+                    const sectionTitle = section.querySelector('h2.narrate-able').textContent.trim();
+                    let textToNarrate = Array.from(textElements).map(el => el.textContent.trim()).join('. ');
+                    generateAndPlayAudio(textToNarrate, sectionTitle);
+                });
+            });
+
+            closePlayerBtn.addEventListener('click', () => {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.src = '';
+                    currentAudio = null;
+                }
+                audioPlayer.classList.add('translate-y-full');
+            });
+
+        });
+    </script>
+</body>
+</html>
